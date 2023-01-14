@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2023_01_07_163334) do
     t.string "name"
     t.string "email"
     t.integer "age"
+    t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,4 +48,5 @@ ActiveRecord::Schema.define(version: 2023_01_07_163334) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+
 end
