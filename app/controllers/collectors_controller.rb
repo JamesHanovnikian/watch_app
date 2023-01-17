@@ -1,7 +1,7 @@
 class CollectorsController < ApplicationController
   def index
     collectors = Collector.all
-    render json: collectors.as_json
+    render json: collectors
   end
 
   def create
