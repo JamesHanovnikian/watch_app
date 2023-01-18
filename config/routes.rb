@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   post "/collectors" => "collectors#create"
   get "/collectors/:id" => "collectors#show"
   delete "/collectors/:id" => "collectors#destroy"
+  patch "/collectors/:id" => "collectors#update"
 
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
+
+  get "/watch_collectors" => "watch_collectors#create"
+  delete "/watch_collectors/:id" => "watch_collectors#destroy"
 end

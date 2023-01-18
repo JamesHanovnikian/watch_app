@@ -24,4 +24,14 @@ class CollectorsController < ApplicationController
     collector.destroy
     render json: { message: "Collector has been deleted" }
   end
+
+  def update
+    collector = Collector.find_by(id: params[:id])
+    collector.name = params[:name] || collector.name
+    collector.age = params[:age] || collector.age
+    collector.email = params[:email] || collector.email
+    collector.img_url = params[:img_url] || collector.img_url
+    collector.save
+    render json: collector.as_json
+  end
 end
