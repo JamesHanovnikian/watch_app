@@ -31,4 +31,10 @@ class WatchesController < ApplicationController
     watch.save
     render json: watch.as_json
   end
+
+  def destroy
+    watch = Watch.find_by(id: params[:id])
+    watch.destroy
+    render json: { message: "You have deleted this watch" }
+  end
 end
