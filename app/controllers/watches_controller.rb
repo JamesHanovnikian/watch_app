@@ -1,7 +1,7 @@
 class WatchesController < ApplicationController
   def index
     watches = Watch.all
-    render json: watches.as_json
+    render json: watches
   end
 
   def create
@@ -13,12 +13,12 @@ class WatchesController < ApplicationController
       img_url: params[:img_url],
     )
     watch.save
-    render json: watch.as_json
+    render json: watch
   end
 
   def show
     watch = Watch.find_by(id: params[:id])
-    render json: watch.as_json
+    render json: watch
   end
 
   def update
@@ -29,7 +29,7 @@ class WatchesController < ApplicationController
     watch.price = params[:price] || watch.price
     watch.img_url = params[:img_url] || watch.img_url
     watch.save
-    render json: watch.as_json
+    render json: watch
   end
 
   def destroy

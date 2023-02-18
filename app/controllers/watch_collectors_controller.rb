@@ -1,4 +1,9 @@
 class WatchCollectorsController < ApplicationController
+  def index
+    watch_collectors = WatchCollector.all
+    render json: watch_collectors.as_json
+  end
+
   def create
     watch_collector = WatchCollector.new(
       watch_id: params[:watch_id],
