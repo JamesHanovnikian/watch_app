@@ -1,7 +1,7 @@
 class WatchCollectorsController < ApplicationController
   def index
     watch_collectors = WatchCollector.all
-    render json: watch_collectors.as_json
+    render json: watch_collectors
   end
 
   def create

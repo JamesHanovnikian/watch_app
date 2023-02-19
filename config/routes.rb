@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
 
+  get "/watch_collectors" => "watch_collectors#index"
   get "/watch_collectors" => "watch_collectors#create"
   delete "/watch_collectors/:id" => "watch_collectors#destroy"
-  get "/watch_collectors" => "watch_collectors#index"
 end
